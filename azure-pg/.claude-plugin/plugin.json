@@ -1,0 +1,19 @@
+{
+  "name": "azure-pg",
+  "version": "0.1.1",
+  "description": "Conecta Claude Code / Cowork a Azure Database for PostgreSQL via Azure MCP Server con autenticación Microsoft Entra ID.",
+  "author": {
+    "name": "Ironside",
+    "email": "lfarr@ironside.cl"
+  },
+  "homepage": "https://github.com/lfarr-ironside/ironside-claude-plugins",
+  "repository": "https://github.com/lfarr-ironside/ironside-claude-plugins.git",
+  "license": "MIT",
+  "keywords": [
+    "azure",
+    "postgresql",
+    "mcp",
+    "entra-id",
+    "ironside"
+  ]
+}

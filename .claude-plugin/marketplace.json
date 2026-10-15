@@ -1,0 +1,30 @@
+{
+  "name": "ironside-mcp",
+  "owner": {
+    "name": "Ironside",
+    "email": "lfarr@ironside.cl",
+    "url": "https://github.com/lfarr-ironside"
+  },
+  "metadata": {
+    "description": "Plugins de Claude para conectarse a la infraestructura de Ironside.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ironside-db",
+      "source": "./ironside-db",
+      "description": "Consulta la base de reportes (ventas, stock, productos). No requiere instalar nada: el servidor corre en Azure y se entra con la cuenta Microsoft.",
+      "version": "1.0.0",
+      "category": "database",
+      "tags": ["azure", "postgresql", "mcp", "entra-id", "remoto", "lectura"]
+    },
+    {
+      "name": "azure-pg",
+      "source": "./azure-pg",
+      "description": "Conector a Azure PostgreSQL con la identidad de cada usuario. Para el equipo de datos: requiere Node.js y Azure CLI con az login.",
+      "version": "0.1.1",
+      "category": "database",
+      "tags": ["azure", "postgresql", "mcp", "entra-id", "local"]
+    }
+  ]
+}

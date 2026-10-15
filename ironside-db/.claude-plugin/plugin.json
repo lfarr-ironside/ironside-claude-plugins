@@ -1,0 +1,20 @@
+{
+  "name": "ironside-db",
+  "version": "1.0.0",
+  "description": "Consulta la base de reportes de Ironside desde Claude. No requiere instalar nada: el servidor corre en Azure y la autenticación es con tu cuenta Microsoft.",
+  "author": {
+    "name": "Ironside",
+    "email": "lfarr@ironside.cl"
+  },
+  "homepage": "https://github.com/lfarr-ironside/ironside-claude-plugins",
+  "repository": "https://github.com/lfarr-ironside/ironside-claude-plugins.git",
+  "license": "MIT",
+  "keywords": [
+    "azure",
+    "postgresql",
+    "mcp",
+    "entra-id",
+    "ironside",
+    "remoto"
+  ]
+}

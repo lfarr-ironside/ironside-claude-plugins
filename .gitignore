@@ -1,0 +1,14 @@
+# Secretos / config local
+.env
+.env.local
+*.local
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editores / SO
+.DS_Store
+.vscode/
+.idea/
+*.swp
