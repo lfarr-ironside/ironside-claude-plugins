@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ironside-db-full": {
+      "type": "http",
+      "url": "https://ironside-mcp-db-full.azurewebsites.net/mcp/"
+    }
+  }
+}

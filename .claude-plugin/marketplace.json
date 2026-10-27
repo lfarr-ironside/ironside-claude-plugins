@@ -7,16 +7,38 @@
   },
   "metadata": {
     "description": "Plugins de Claude para conectarse a la infraestructura de Ironside.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "ironside-db",
       "source": "./ironside-db",
-      "description": "Consulta la base de reportes (ventas, stock, productos). No requiere instalar nada: el servidor corre en Azure y se entra con la cuenta Microsoft.",
+      "description": "Consulta la base de reportes (ventas, stock, productos, presupuesto). No requiere instalar nada: el servidor corre en Azure y se entra con la cuenta Microsoft.",
+      "version": "1.1.0",
+      "category": "database",
+      "tags": [
+        "azure",
+        "postgresql",
+        "mcp",
+        "entra-id",
+        "remoto",
+        "lectura"
+      ]
+    },
+    {
+      "name": "ironside-db-full",
+      "source": "./ironside-db-full",
+      "description": "Acceso completo de solo lectura a la base de reportes, incluidos costos y margenes. Requiere pertenecer al grupo BBDD Reader Full Claude.",
       "version": "1.0.0",
       "category": "database",
-      "tags": ["azure", "postgresql", "mcp", "entra-id", "remoto", "lectura"]
+      "tags": [
+        "azure",
+        "postgresql",
+        "mcp",
+        "entra-id",
+        "remoto",
+        "completo"
+      ]
     },
     {
       "name": "azure-pg",
@@ -24,7 +46,13 @@
       "description": "Conector a Azure PostgreSQL con la identidad de cada usuario. Para el equipo de datos: requiere Node.js y Azure CLI con az login.",
       "version": "0.1.1",
       "category": "database",
-      "tags": ["azure", "postgresql", "mcp", "entra-id", "local"]
+      "tags": [
+        "azure",
+        "postgresql",
+        "mcp",
+        "entra-id",
+        "local"
+      ]
     }
   ]
 }

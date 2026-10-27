@@ -1,10 +1,12 @@
 ---
 description: |
   Use this skill when the user asks about Ironside's sales, inventory, stock,
-  products or categories. Trigger phrases: "cuánto vendimos", "ventas de",
-  "qué stock hay", "inventario", "cuántas unidades", "qué productos",
-  "muéstrame las ventas", "consulta la base", "cuánto facturamos",
-  "stock en bodega", "sales data", "how much did we sell", "inventory",
+  products, categories or the sales budget. Trigger phrases:
+  "cuánto vendimos", "ventas de", "qué stock hay", "inventario",
+  "cuántas unidades", "qué productos", "muéstrame las ventas",
+  "consulta la base", "cuánto facturamos", "stock en bodega",
+  "contra presupuesto", "cumplimiento", "la meta", "cómo vamos",
+  "sales data", "how much did we sell", "inventory", "budget",
   or any natural-language question about Ironside business data.
 ---
 
@@ -38,6 +40,20 @@ así que `COUNT(*)` cuenta líneas, no facturas. Siempre
 **Las notas de crédito ya vienen en negativo.** No hay que excluirlas ni
 restarlas aparte: `SUM(venta_neta)` las netea solo. Si alguien pide "ventas
 sin devoluciones", ahí sí filtrá `tipo_movimiento = 'out_invoice'`.
+
+## Presupuesto
+
+La vista `presupuesto` tiene la meta diaria de venta. Se une con `ventas`
+por **fecha + compania + equipo_ventas**; los nombres de columna coinciden a
+propósito.
+
+**Compara períodos equivalentes.** El presupuesto cubre el año entero, así
+que sumar la meta anual contra la venta transcurrida da un cumplimiento
+falso y siempre bajo. Acota los dos lados al mismo rango.
+
+**No lo mires día a día.** La meta diaria no es plana: sigue una curva con
+los eventos de cada país —CyberDay en Chile, Buen Fin y Hot Sale en México,
+CyberMonday y Black Friday en Argentina—. Agrega por semana o por mes.
 
 ## Monedas: no se suman entre países
 
